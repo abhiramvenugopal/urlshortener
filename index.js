@@ -14,7 +14,13 @@ mongoose.connect(process.env.DB)
 app.use(cors())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
+
+//API for Creating short URL
+
 app.use("/api/v1/url/",urlAPI);
+
+//API for redirecting to actual URL
+
 app.use("/url/",redirectAPI);
 
 
