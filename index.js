@@ -28,7 +28,7 @@ const swaggerInfo={
             name: "Abhiram Venugopal",
             email: "abhiram.venugopal007@gmail.com"
           },
-          servers: ["https://urlshortenerapp77.herokuapp.com/"]
+          servers: ["https://urlshortenerapp77.herokuapp.com"]
         }
       },
       apis: ["./api/*.js"]
