@@ -31,7 +31,7 @@ const swaggerInfo={
           servers: ["https://urlshortenerapp77.herokuapp.com"]
         }
       },
-      apis: ["./api/*.js"]
+      apis: [".api/*.js"]
 }
 
 const swaggerDocs=swaggerJsDoc(swaggerInfo)
