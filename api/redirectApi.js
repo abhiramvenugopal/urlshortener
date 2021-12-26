@@ -5,7 +5,7 @@ const router=express.Router();
 
 /**
  * @swagger
- * /{shortId}:
+ * /url/{shortId}:
  *  get:
  *    description: API redirecting short URL to Actual URL
  *    parameters:

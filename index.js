@@ -23,12 +23,12 @@ const swaggerInfo={
         info: {
           version: "1.0.0",
           title: "URL Shortner API",
-          description: "API for converting long URLs with UTM tracking",
+          description: "API for converting long URLs with UTM tracking to short URL",
           contact: {
             name: "Abhiram Venugopal",
             email: "abhiram.venugopal007@gmail.com"
           },
-          servers: ["https://urlshortenerapp77.herokuapp.com"]
+          servers: [process.env.baseurl]
         }
       },
       apis: ["./api/*.js"]
