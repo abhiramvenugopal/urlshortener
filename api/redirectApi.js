@@ -2,17 +2,22 @@ const express=require("express");
 const urlModel=require('../model/url')
 const router=express.Router();
 
+
 /**
  * @swagger
- * /<shortId>
- * get:
- *  description: API redirecting short URL to Actual URL
- *  responses:
- *      '400':
- *        description: URL Not Found    
+ * /{shortId}:
+ *  get:
+ *    description: API redirecting short URL to Actual URL
+ *    parameters:
+ *       - in: path
+ *         required: true
+ *         description: URL ID
+ *    responses:
+ *      '401':
+ *        description: URL Not Found
+ *      '200':
+ *        description: Redirect to Actual URL
  */
-
-// Request handler for rediecting short URL to Actual URL
 router.get('/:shortId',async (req,res)=>{
     try {
         //fetching Actiual URL from DB

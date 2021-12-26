@@ -4,7 +4,30 @@ const urlModel=require('../model/url')
 
 const router=express.Router();
 
-// Request handler for creating short URL 
+/**
+ * @swagger
+ * /api/v1/url/geturl:
+ *  post:
+ *    description: API for creating short URL
+ *    consumes:
+ *      - application/json  
+ *    parameters:
+ *       - in: body
+ *         name: user
+ *         required: true
+ *         schema:
+ *             type: object
+ *             required:
+ *                  - url
+ *             properties:
+ *                  url:
+ *                      type: string
+ *    responses:
+ *      '200':
+ *        description: Return Short URL 
+ *      '500':
+ *        description: Request failed
+ */
 router.post('/geturl',async (req,res)=>{
     try {
         shortId=utility.createUrlId()
